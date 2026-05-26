@@ -3,6 +3,7 @@
 // Corsair devices
 #include "devices/corsair_void_rich.hpp"
 #include "devices/corsair_void_v2w.hpp"
+#include "devices/corsair_virtuoso_xt.hpp"
 
 // Logitech devices with HIDPPDevice protocol template
 #include "devices/logitech_g432.hpp"
@@ -104,6 +105,7 @@ void DeviceRegistry::initialize()
         // Corsair devices
         registerDevice(std::make_unique<CorsairVoidRich>());
         registerDevice(std::make_unique<CorsairVoidV2W>());
+        registerDevice(std::make_unique<CorsairVirtuosoXT>());
 
         // SteelSeries devices (using SteelSeries protocol templates)
         registerDevice(std::make_unique<SteelSeriesArctis1>());
